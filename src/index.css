@@ -145,21 +145,6 @@ a {
   margin-bottom: 20px;
 }
 
-.badge-pill .pulse-dot {
-  width: 8px;
-  height: 8px;
-  background-color: var(--color-primary);
-  border-radius: 50%;
-  box-shadow: 0 0 10px var(--color-primary);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(80, 132, 230, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(80, 132, 230, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(80, 132, 230, 0); }
-}
-
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -200,18 +185,6 @@ a {
   background: var(--color-bg-card-hover);
   border-color: var(--color-border-glow);
   transform: translateY(-2px);
-}
-
-.btn-outline {
-  background: transparent;
-  color: #ffffff;
-  border: 1px solid var(--color-border);
-}
-
-.btn-outline:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-  background: var(--color-primary-light);
 }
 
 /* Card base */

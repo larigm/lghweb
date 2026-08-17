@@ -34,7 +34,7 @@ export default function Navbar({ onOpenWhatsApp }) {
         <div className="nav-actions">
           <button className="btn btn-primary btn-sm desktop-only-btn" onClick={onOpenWhatsApp}>
             <MessageCircle size={18} />
-            <span>Falar com um Especialista</span>
+            <span>Solicitar um orçamento</span>
           </button>
 
           <button 
@@ -65,7 +65,7 @@ export default function Navbar({ onOpenWhatsApp }) {
             }}
           >
             <MessageCircle size={18} />
-            <span>Falar com um Especialista</span>
+            <span>Solicitar um orçamento</span>
           </button>
         </div>
       )}

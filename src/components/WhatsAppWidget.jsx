@@ -19,7 +19,7 @@ export default function WhatsAppWidget({ onOpenWhatsApp }) {
             Olá! 👋 Precisa de um site profissional ou vitrine virtual para o seu negócio?
           </p>
           <button className="btn btn-primary btn-sm tooltip-btn" onClick={onOpenWhatsApp}>
-            <Send size={14} /> Falar com um Especialista
+            <Send size={14} /> Solicitar um orçamento
           </button>
         </div>
       )}

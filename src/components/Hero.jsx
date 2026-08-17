@@ -3,14 +3,14 @@ import { ArrowRight, MessageCircle } from 'lucide-react';
 
 export default function Hero({ onOpenWhatsApp }) {
   return (
-    <section className="hero-section hero-centered-bg">
-      <div className="hero-bg-overlay"></div>
-      
+    <section className="hero-section">
+      {/* Blurred image background layer */}
+      <div className="hero-image-blurred-bg"></div>
+
       <div className="container hero-container-centered">
-        {/* Centered Content */}
         <div className="hero-content-centered">
           <h1 className="hero-title">
-            Um bom negócio merece <span className="text-gradient">uma boa primeira impressão</span>.
+            Um bom negócio merece uma boa primeira impressão.
           </h1>
 
           <p className="hero-subtitle">
@@ -31,13 +31,9 @@ export default function Hero({ onOpenWhatsApp }) {
       </div>
 
       <style>{`
-        .hero-centered-bg {
+        .hero-section {
           position: relative;
           padding: 220px 0 160px 0;
-          background-image: url('/hero_computer_bg.png');
-          background-size: cover;
-          background-position: center center;
-          background-repeat: no-repeat;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -45,18 +41,18 @@ export default function Hero({ onOpenWhatsApp }) {
           overflow: hidden;
         }
 
-        .hero-bg-overlay {
+        .hero-image-blurred-bg {
           position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: linear-gradient(
-            180deg, 
-            rgba(18, 23, 49, 0.88) 0%, 
-            rgba(18, 23, 49, 0.94) 50%, 
-            rgba(18, 23, 49, 1) 100%
-          );
+          top: -20px;
+          left: -20px;
+          right: -20px;
+          bottom: -20px;
+          background-image: url('/hero_computer_bg.png');
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          filter: blur(8px) brightness(0.7);
+          transform: scale(1.05);
           z-index: 1;
         }
 
@@ -78,19 +74,22 @@ export default function Hero({ onOpenWhatsApp }) {
         }
 
         .hero-title {
-          font-size: 3.25rem;
+          font-size: 3.5rem;
           line-height: 1.2;
           margin-bottom: 24px;
           letter-spacing: -1px;
           color: #ffffff;
+          font-weight: 800;
+          text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
         }
 
         .hero-subtitle {
-          font-size: 1.25rem;
-          color: #cbd5e1;
-          margin-bottom: 40px;
+          font-size: 1.3rem;
+          color: #e2e8f0;
+          margin-bottom: 44px;
           max-width: 760px;
-          line-height: 1.6;
+          line-height: 1.65;
+          text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
         }
 
         .hero-actions-centered {
@@ -104,10 +103,11 @@ export default function Hero({ onOpenWhatsApp }) {
         .btn-hero {
           padding: 16px 32px;
           font-size: 1.05rem;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
 
         @media (max-width: 992px) {
-          .hero-centered-bg {
+          .hero-section {
             padding: 160px 0 90px 0;
             min-height: auto;
           }
