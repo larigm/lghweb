@@ -5,12 +5,12 @@ export default function Portfolio({ onOpenWhatsApp }) {
   return (
     <section id="portfolio" className="section-padding portfolio-section">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header reveal">
           <h2>Portfólio</h2>
           <p>Conheça a qualidade dos projetos desenvolvidos pela LGHWeb.</p>
         </div>
 
-        <div className="portfolio-empty-box card-glass">
+        <div className="portfolio-empty-box card-glass reveal reveal-delay-1">
           <div className="empty-icon-wrapper">
             <Layers size={48} color="#5084e6" />
           </div>

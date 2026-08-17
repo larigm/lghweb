@@ -42,7 +42,7 @@ export default function Faq({ onOpenWhatsApp }) {
   return (
     <section id="faq" className="section-padding faq-section">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header reveal">
           <h2>Perguntas Frequentes</h2>
           <p>Respondemos as principais dúvidas para que você tome a decisão com total segurança.</p>
         </div>
@@ -53,7 +53,7 @@ export default function Faq({ onOpenWhatsApp }) {
             return (
               <div 
                 key={idx} 
-                className={`faq-item card-glass ${isOpen ? 'open' : ''}`}
+                className={`faq-item card-glass reveal reveal-delay-${(idx % 3) + 1} ${isOpen ? 'open' : ''}`}
                 onClick={() => toggleFaq(idx)}
               >
                 <div className="faq-question">
@@ -73,7 +73,7 @@ export default function Faq({ onOpenWhatsApp }) {
           })}
         </div>
 
-        <div className="faq-cta-box">
+        <div className="faq-cta-box reveal">
           <h3>Ainda tem alguma dúvida específica sobre o seu projeto?</h3>
           <p>Fale diretamente com o nosso especialista e tire todas as suas dúvidas em minutos.</p>
           <button className="btn btn-primary" onClick={onOpenWhatsApp}>

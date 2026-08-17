@@ -53,15 +53,15 @@ export default function Services({ onOpenWhatsApp }) {
   return (
     <section id="servicos" className="section-padding services-section">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header reveal">
           <h2>Nossos serviços</h2>
           <p>Escolha a Estrutura Perfeita para O Seu Negócio</p>
         </div>
 
         <div className="services-grid">
-          {services.map((service) => {
+          {services.map((service, idx) => {
             return (
-              <div key={service.id} className="card-glass service-card">
+              <div key={service.id} className={`card-glass service-card reveal reveal-delay-${idx + 1}`}>
                 <h3 className="service-title">{service.title}</h3>
                 <p className="service-subtitle">{service.subtitle}</p>
                 <p className="service-description">{service.description}</p>
@@ -73,8 +73,8 @@ export default function Services({ onOpenWhatsApp }) {
                 <div className="service-divider"></div>
 
                 <ul className="service-features-list">
-                  {service.features.map((feat, idx) => (
-                    <li key={idx}>
+                  {service.features.map((feat, fIdx) => (
+                    <li key={fIdx}>
                       <CheckCircle2 size={16} className="check-icon" />
                       <span>{feat}</span>
                     </li>
@@ -96,7 +96,7 @@ export default function Services({ onOpenWhatsApp }) {
                       onClick={() => onOpenWhatsApp && onOpenWhatsApp(`Olá LGHWeb! Gostaria de um orçamento para o serviço: ${service.title}`)}
                     >
                       <MessageCircle size={18} />
-                      <span>Solicitar Orçamento</span>
+                      <span>Solicitar um orçamento</span>
                     </button>
                   </div>
                 </div>

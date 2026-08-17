@@ -27,7 +27,7 @@ export default function Process() {
   return (
     <section id="processo" className="section-padding process-section">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header reveal">
           <h2>Processo de desenvolvimento</h2>
           <p>Entenda os passos para o seu site ficar online</p>
         </div>
@@ -35,7 +35,7 @@ export default function Process() {
         <div className="process-grid">
           {steps.map((step, idx) => {
             return (
-              <div key={idx} className="card-glass process-card">
+              <div key={idx} className={`card-glass process-card reveal reveal-delay-${idx + 1}`}>
                 <div className="process-card-header">
                   <h3 className="process-title">{step.title}</h3>
                   <span className="process-num-badge">{step.num}</span>
